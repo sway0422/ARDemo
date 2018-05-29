@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3hH-9c-NKd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="rXk-fH-f4F">
+            <objects>
+                <viewController storyboardIdentifier="ARMainVC" id="3hH-9c-NKd" customClass="ARMainVC" customModule="CameraIQARDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NaA-mK-Uyc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2n-jS-Al1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xJw-br-SBq">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7XT-3U-gqG"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J2X-gy-Xw2">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ARCollectionViewCell" reuseIdentifier="ARCollectionViewCell" id="hcM-rp-zCs" customClass="ARCollectionViewCell" customModule="CameraIQARDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncw-3a-1eN">
+                                                    <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Ncw-3a-1eN" secondAttribute="trailing" constant="2" id="CZH-fE-JbS"/>
+                                            <constraint firstItem="Ncw-3a-1eN" firstAttribute="top" secondItem="hcM-rp-zCs" secondAttribute="topMargin" constant="2" id="EdT-Lf-87f"/>
+                                            <constraint firstItem="Ncw-3a-1eN" firstAttribute="centerX" secondItem="hcM-rp-zCs" secondAttribute="centerX" id="jeP-ZY-LRO"/>
+                                            <constraint firstItem="Ncw-3a-1eN" firstAttribute="leading" secondItem="hcM-rp-zCs" secondAttribute="leadingMargin" constant="2" id="n28-2C-Yjf"/>
+                                            <constraint firstItem="Ncw-3a-1eN" firstAttribute="centerY" secondItem="hcM-rp-zCs" secondAttribute="centerY" id="uqn-Z3-rBP"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Ncw-3a-1eN" secondAttribute="bottom" constant="2" id="zxY-YI-foX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="mBtn" destination="Ncw-3a-1eN" id="DrH-r6-kvD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xJw-br-SBq" firstAttribute="trailing" secondItem="ENL-TO-rI5" secondAttribute="trailing" id="6h9-Sc-mUn"/>
+                            <constraint firstItem="i2n-jS-Al1" firstAttribute="bottom" secondItem="ENL-TO-rI5" secondAttribute="bottom" id="PRA-Ta-wUb"/>
+                            <constraint firstItem="xJw-br-SBq" firstAttribute="leading" secondItem="ENL-TO-rI5" secondAttribute="leading" id="PRP-cJ-43f"/>
+                            <constraint firstItem="i2n-jS-Al1" firstAttribute="trailing" secondItem="ENL-TO-rI5" secondAttribute="trailing" id="UXz-rN-LeH"/>
+                            <constraint firstItem="xJw-br-SBq" firstAttribute="bottom" secondItem="ENL-TO-rI5" secondAttribute="bottom" id="Ulf-U9-gOU"/>
+                            <constraint firstItem="i2n-jS-Al1" firstAttribute="leading" secondItem="ENL-TO-rI5" secondAttribute="leading" id="oHv-AK-wDe"/>
+                            <constraint firstItem="i2n-jS-Al1" firstAttribute="top" secondItem="NaA-mK-Uyc" secondAttribute="top" id="wYp-25-8ha"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ENL-TO-rI5"/>
+                    </view>
+                    <connections>
+                        <outlet property="mCollectionView" destination="xJw-br-SBq" id="Hnx-sl-GxC"/>
+                        <outlet property="sceneView" destination="i2n-jS-Al1" id="Rwf-3o-jSO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6H-5U-OE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="-115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
